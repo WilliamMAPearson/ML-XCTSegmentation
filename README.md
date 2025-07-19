@@ -42,6 +42,14 @@ After the model has been trained on this new augmented data, the below image sho
 </p>
 
 
+
+
+## References
+This model was made based on work done for the PhD project of William Pearson in 2022.
+However, the data for that project is no longer available so this repo works as a public proof of concept using the data of a similar publication:
+Publication: https://advanced.onlinelibrary.wiley.com/doi/epdf/10.1002/adem.202401699
+Data: https://osf.io/k27v4/files/osfstorage#
+
 ---
 
 ## Setup Instructions
