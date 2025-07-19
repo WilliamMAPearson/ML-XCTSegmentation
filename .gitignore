@@ -1,1 +1,8 @@
 .venv/
+ML-XCT/ML/dataset/images/*.png
+ML-XCT/ML/dataset/masks/*.png
+!ML-XCT/ML/dataset/images/
+!ML-XCT/ML/dataset/images/.gitkeep
+!ML-XCT/ML/dataset/masks/
+!ML-XCT/ML/dataset/masks/.gitkeep
+*.pth
