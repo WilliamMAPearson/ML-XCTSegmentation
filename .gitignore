@@ -1,0 +1,8 @@
+.venv/
+*.pyc
+project/src/dataset/images/*.png
+project/src/dataset/masks/*.png
+!project/src/dataset/images/
+!project/src/dataset/images/.gitkeep
+!project/src/dataset/masks/
+!project/src/dataset/masks/.gitkeep
