@@ -12,7 +12,7 @@ During the corrosion process, various features can appear on the metal surface, 
 ## The Project
 The below segmentation shows the aim of this project. The image on the left shows products growing on the metal surface during a corrosion process, the metal is the bright circular shape, the blobs on the surface are the product of the corrosion process, the outer circular ring is an artefact of the XCT recontruction algorithm, and the black background in the corners is absence of any data. The right image shows the ultimate aim of segmenting and clustering the indiviudal blobs, where each color represents an individual product of interest, the size over time is what is of interest.
 <p align="center">
-  <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/ML-XCT/Description/images/Aim_of_Segmentation.png" width="500">
+  <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/ML-XCT/Description/images/Aim_Of_Segmentation.png" width="500">
 </p>
 
 The next image shows the affect of applying traditional segmentation algorithms to the original image. The top row shows the original image next to attempts to segment the image using global thresholding, otsu thresholding, and K-means clustering techniques. The bottom row shows the ground truth overlaid on the original image and shows what the aim of the segmentation is, the other images on the bottom row show the segmentations overlaid on the original image. They show that they lack in both their ability to segment only the blobs but also splitting the unique blobs.
@@ -26,8 +26,20 @@ The aim of this project then, is to provide a more robust method of segmentation
 </p>
 
 ## Machine Learning Model
-This model is based on ```deeplabv3_resnet101``` pretrained model. ```deeplabv3_resnet101``` is a semantic segmentation model available in PyTorch designed for classifying each pixel in an image into a specific category e.g. road, person, car, etc.
+This model is based on ```deeplabv3_resnet101``` pretrained model. ```deeplabv3_resnet101``` is a semantic segmentation model available in PyTorch designed for classifying each pixel in an image into a specific category e.g. road, person, car, etc. The image below shows how good this model is at segmenting the problem out of the package. Obviously, becuase the image doesn't contain a dog or a car, and the data set has not seen corrosion like this before, nothing is segmented.
+<p align="center">
+  <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/ML-XCT/Description/images/out_of_the_model_segmentation.png" width="500">
+</p>
 
+Therefore the original image, alongside a mask of the ground truth segmentation is provided, however, this more data is created by augmenting the ground truth. Below shows 5 examples of the ground truth that has been augmented with various elements i.e. rotation, stretch, brightness.
+<p align="center">
+  <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/ML-XCT/Description/images/augmented_images.png" width="500">
+</p>
+
+After the model has been trained on this new augmented data, the below image shows its new ability to segment the image.
+<p align="center">
+  <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/ML-XCT/Description/images/final_model.png" width="500">
+</p>
 
 
 ---
@@ -106,13 +118,4 @@ pip install -r requirements.txt
 
 # Run the app
 python main.py
-```
-
-
-## 99. Notes
-
-Automatically Add Pakcages to Requirements, from within the virtual environment:
-
-```sh
-pip freeze > requirements.txt
 ```
