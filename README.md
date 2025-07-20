@@ -41,7 +41,7 @@ After the model has been trained on this new augmented data, the below image sho
   <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/project/Description/images/final_model.png" width="500">
 </p>
 
-Validating the model against images it has not seen is an important step in an ML pipeline, this image shows the segmentation for three images the model has not seen, and shows that even with only one starting image and 1 hour of training, this model can be used to segment the full data set.
+Validating the model against images it has not seen is an important step in an ML pipeline, this image shows the segmentation for three images the model has not seen, and shows that even with only one starting image and 1 hour of training, this model shows promising signs of usefullness. Further training with more test images and more training time would further benefit the model.
 <p align="center">
   <img src="https://github.com/WilliamMAPearson/ML-XCTSegmentaion/blob/main/project/Description/images/validation_output.png" width="500">
 </p>
