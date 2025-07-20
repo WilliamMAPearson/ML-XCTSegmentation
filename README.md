@@ -1,4 +1,4 @@
-# ML-XCT Segmentation
+# ML-XCT Segmentation - Training with a Single Image
 
 This project provides tools for XCT (X-ray Computed Tomography) segmentation aimed at tracking the evolution of corrosion growth on the sides of metal samples. This method is designed to perform effective segmentation of corrosion growth in XCT scans using only a single training image.
 
