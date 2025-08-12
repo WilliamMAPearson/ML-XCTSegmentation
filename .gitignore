@@ -1,5 +1,6 @@
 .venv/
 *.pyc
+*.pth
 project/src/dataset_train/images/*.png
 !project/src/dataset_train/images/.gitkeep
 project/src/dataset_train/masks/*.png
